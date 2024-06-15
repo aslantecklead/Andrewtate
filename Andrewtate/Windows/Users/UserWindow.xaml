@@ -7,6 +7,30 @@
         mc:Ignorable="d"
         Title="UserWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="167*"/>
+            <RowDefinition Height="267*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1">
+            <DataGrid x:Name="dgStations" Margin="10" AutoGenerateColumns="False" IsReadOnly="True" SelectionChanged="dgStations_SelectionChanged" >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Width="150" FontSize="15" Header="Имя" Binding="{Binding Name}"></DataGridTextColumn>
+                    <DataGridTextColumn Width="150" FontSize="15" Header="Город" Binding="{Binding Town}"></DataGridTextColumn>
+                    <DataGridTextColumn Width="150" FontSize="15" Header="Вместимость" Binding="{Binding Size}"></DataGridTextColumn>
+                    <DataGridTextColumn Width="150" FontSize="15" Header="Поезд" Binding="{Binding Train.Name}"></DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="10,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="161"><Run Language="ru-ru" Text="Имя"/></TextBlock>
+        <TextBox x:Name="tbName" FontSize="15" HorizontalAlignment="Left" Margin="10,92,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="249" Height="32"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142"><Run Language="ru-ru" Text="Город"/></TextBlock>
+        <TextBox x:Name="tbTown" FontSize="15" HorizontalAlignment="Left" Margin="10,33,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="249" Height="32"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142"><Run Language="ru-ru" Text="Имя"/></TextBlock>
+        <TextBox x:Name="tbSize" FontSize="15" HorizontalAlignment="Left" Margin="281,33,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="99" Height="32"/>
+        <TextBlock HorizontalAlignment="Left" Margin="281,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="99"><Run Language="ru-ru" Text="Вместимость"/></TextBlock>
+        <ComboBox Name="cbTrain" HorizontalAlignment="Left" Margin="281,92,0,0" VerticalAlignment="Top" Width="164" Height="32"/>
+        <TextBlock HorizontalAlignment="Left" Margin="281,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142"><Run Language="ru-ru" Text="Поезд"/></TextBlock>
+        <TextBox x:Name="Count" FontSize="15" HorizontalAlignment="Left" Margin="400,33,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Height="32"/>
+        <TextBlock HorizontalAlignment="Left" Margin="400,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="199" Height="18"><Run Text="Статистика количества п"/><Run Language="ru-ru" Text="оездов"/></TextBlock>
     </Grid>
 </Window>

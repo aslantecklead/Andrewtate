@@ -7,9 +7,11 @@
         mc:Ignorable="d"
         Title="Auth" Height="450" Width="800">
     <Grid>
-        <TextBox x:Name="tbLogin" FontSize="15" HorizontalAlignment="Center" Margin="0,91,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="294" Height="45"/>
-        <TextBox x:Name="tbPassword" FontSize="15" HorizontalAlignment="Center" Margin="0,166,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="294" Height="45"/>
-        <Button x:Name="btnEnter" Content="Вход" HorizontalAlignment="Center" Margin="0,256,0,0" VerticalAlignment="Top" Height="40" Width="206" Click="btnEnter_Click"/>
+        <TextBox x:Name="tbLogin" FontSize="15" HorizontalAlignment="Center" Margin="0,104,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="294" Height="45"/>
+        <TextBox x:Name="tbPassword" FontSize="15" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="294" Height="45"/>
+        <Button x:Name="btnEnter" Content="Вход" HorizontalAlignment="Center" Margin="0,285,0,0" VerticalAlignment="Top" Height="40" Width="206" Click="btnEnter_Click"/>
+        <Label Content="Login" HorizontalAlignment="Center" Margin="0,78,0,0" VerticalAlignment="Top" Width="294"/>
+        <Label Content="Password" HorizontalAlignment="Center" Margin="0,169,0,0" VerticalAlignment="Top" Width="294"/>
 
     </Grid>
 </Window>
